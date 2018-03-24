@@ -1,7 +1,7 @@
 
 PYTHON_VERSION=2
 
-.PHONY: all init-project install update freeze test
+.PHONY: all init-project install update freeze test publish
 
 all: init-project install
 
@@ -21,3 +21,6 @@ freeze:
 
 test:
 	pipenv run python -m unittest discover
+
+publish:
+	pipenv run python setup.py register sdist upload
