@@ -1,5 +1,5 @@
 
-PYTHON_VERSION=3
+PYTHON_VERSION=2
 
 .PHONY: all init-project install update freeze test
 
@@ -20,4 +20,4 @@ freeze:
 	pipenv run pip freeze > requirements.txt
 
 test:
-	pipenv run py.test
+	pipenv run python -m unittest discover
