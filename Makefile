@@ -1,7 +1,8 @@
 
 PYTHON_VERSION=2
 
-.PHONY: all init-project install update freeze test publish
+.PHONY: all init-project install update freeze test \
+	publish package disttest
 
 all: init-project install
 
@@ -24,3 +25,9 @@ test:
 
 publish:
 	pipenv run python setup.py register sdist upload
+
+package:
+	pipenv run python setup.py sdist
+
+disttest:
+	pipenv run python setup.py test
