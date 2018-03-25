@@ -1,5 +1,5 @@
 
-PYTHON_VERSION=2
+PYTHON_VERSION=3
 
 .PHONY: all init-project install update freeze test \
 	publish package disttest

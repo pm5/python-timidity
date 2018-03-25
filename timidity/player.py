@@ -31,6 +31,7 @@ _single_key_commands = [
 def make_single_key_command(name, key):
     def method(self):
         self._proc.stdin.write(key)
+        self._proc.stdin.flush()
     method.__name__ = name
     return method
 
